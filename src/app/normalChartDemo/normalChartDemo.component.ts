@@ -20,7 +20,6 @@ let gridLineColor = 'rgba(171, 178, 185,1)';
 @Injectable()
 export class NormalChartDemoComponent implements OnInit {
   constructor(private normalChartDemoDataService: NormalChartDemoDataService) { 
-
    this.mapData = normalChartDemoDataService.getMapData();
   }
 

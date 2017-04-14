@@ -21,7 +21,7 @@ import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
 import 'ts-helpers';
-
+window['Highcharts'] = require('highcharts');
 if ('production' === ENV) {
   // Production
 

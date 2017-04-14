@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "highchart for ng4",
   "main": "index.js",
+  "files": [
+    "dist",
+    "index.ts",
+    "tsconfig.json"
+  ],
   "scripts": {
     "rimraf": "rimraf",
     "start": "npm run server:dev -- --inline --hot",

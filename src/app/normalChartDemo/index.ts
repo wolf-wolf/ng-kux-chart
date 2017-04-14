@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routes } from './normalChartDemo.routes';
 import { NormalChartDemoComponent } from './normalChartDemo.component';
-import { NormalChartModule } from '../../ng-kux-chart';
+import { NormalChartModule } from '../../ng-kux-chart/normalChart';
 import { NormalChartDemoDataService } from './normalChartDemoData.service'
 
 @NgModule({

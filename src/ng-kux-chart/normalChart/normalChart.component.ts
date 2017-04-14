@@ -1,9 +1,11 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { UtilsService } from '../Utils.service';
 import { Subject } from 'rxjs'
-var Highcharts = require('highcharts');
+declare let Highcharts:any
+
 require('highcharts/modules/exporting')(Highcharts);
 require('highcharts/modules/data.js')(Highcharts);
+require('highcharts/modules/map.js')(Highcharts);
 
 //添加hightchart的drilldown
 if (!Highcharts.Chart.prototype.addSeriesAsDrilldown) {
@@ -43,18 +45,13 @@ export class NormalChartComponent implements OnInit, AfterViewInit {
     if (this.chartTheme) {
       Highcharts.theme = this.chartTheme;
       Highcharts.setOptions(Highcharts.theme);
-      console.info( Highcharts.theme)
     }
   }
   ngAfterViewInit() {
     switch (this.chartType) {
       case 'map':
-      console.info('in map')
-      console.info(this.chartOptions)
-        require('highcharts/modules/map.js')(Highcharts);
         this.mapData.subscribe((result) => {
           Highcharts.maps[this.chartOptions.chart.map] = result;
-          console.info(Highcharts.maps)
           Highcharts.mapChart(this.ID, this.chartOptions)
         });
         break;
