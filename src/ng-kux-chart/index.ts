@@ -1,0 +1,1 @@
+export { NormalChartModule } from './normalChart';
