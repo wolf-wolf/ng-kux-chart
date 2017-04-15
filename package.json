@@ -1,6 +1,6 @@
 {
   "name": "ng4-chart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "highchart for ng4",
   "main": "index.js",
   "files": [

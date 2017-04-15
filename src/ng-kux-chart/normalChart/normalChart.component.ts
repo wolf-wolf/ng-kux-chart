@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { UtilsService } from '../Utils.service';
 import { Subject } from 'rxjs'
-declare let Highcharts:any
+var Highcharts = require('highcharts');
+// declare let Highcharts:any
 
 require('highcharts/modules/exporting')(Highcharts);
 require('highcharts/modules/data.js')(Highcharts);
@@ -24,7 +25,7 @@ export class NormalChartComponent implements OnInit, AfterViewInit {
   @Input() private chartTheme: any;
   constructor(
     private utils: UtilsService
-  ) {}
+  ) { }
 
   public ID: string;
 
