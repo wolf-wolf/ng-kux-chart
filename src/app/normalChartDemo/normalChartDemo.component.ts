@@ -19,8 +19,8 @@ let gridLineColor = 'rgba(171, 178, 185,1)';
 
 @Injectable()
 export class NormalChartDemoComponent implements OnInit {
-  constructor(private normalChartDemoDataService: NormalChartDemoDataService) { 
-   this.mapData = normalChartDemoDataService.getMapData();
+  constructor(private normalChartDemoDataService: NormalChartDemoDataService) {
+    this.mapData = normalChartDemoDataService.getMapData();
   }
 
   /**
@@ -177,6 +177,11 @@ export class NormalChartDemoComponent implements OnInit {
   };
 
   public mapData: any;
+
+  public wrapperStyle = {
+    width: '600px',
+    height: '600px'
+  }
 
   ngOnInit() {
   }

@@ -22,10 +22,14 @@ export class NormalChartComponent implements OnInit, AfterViewInit {
   @Input() private chartOptions: any;  //选项
   @Input() private chartType: string;  //图表类型
   @Input() private mapData: Subject<any>;
-  @Input() private chartTheme: any;
+  @Input() private chartTheme: any; //图标的主题
+  @Input() private wrapperClass: string;//图标包裹层的样式
+  @Input() private wrapperStyle: any;//图标包裹层的样式
   constructor(
     private utils: UtilsService
-  ) { }
+  ) {
+    this.wrapperStyle = {}; //默认style为空
+  }
 
   public ID: string;
 
